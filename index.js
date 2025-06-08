@@ -1,7 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const kuromoji = require('kuromoji');
 
 const app = express();
+
+// Enable CORS for all origins
+app.use(cors());
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // Required to parse JSON body
